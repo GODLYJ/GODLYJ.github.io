@@ -82,15 +82,15 @@
 <meta name="description" content="我要吐槽一下markdown的格式转换。。。代码的格式搞了好久。上传的时候一直出错。。不得已又去看了看它的语法。。就很烦。。 好了，吐槽完了就来说正事了，接上一章的顺序结构，这章我们讲讲链式储存结构，所谓链式存储，就是采用链式方式将结点链接起来的存储结构称为链表。不同于顺序结构，链表只需要改变节点地址就可以实现动态操作。 线性表的链式存储又可以分为五种：1、单链表结构 2、循环链表结构 3、双向链">
 <meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表（二） （C语言实现）">
-<meta property="og:url" content="http://yoursite.com/2018/07/29/线性表（二）/index.html">
+<meta property="og:title" content="线性表（二）--链式存储 （C语言实现）">
+<meta property="og:url" content="http://yoursite.com/2018/07/29/线性表（二）--链式结构/index.html">
 <meta property="og:site_name" content="不 是我">
 <meta property="og:description" content="我要吐槽一下markdown的格式转换。。。代码的格式搞了好久。上传的时候一直出错。。不得已又去看了看它的语法。。就很烦。。 好了，吐槽完了就来说正事了，接上一章的顺序结构，这章我们讲讲链式储存结构，所谓链式存储，就是采用链式方式将结点链接起来的存储结构称为链表。不同于顺序结构，链表只需要改变节点地址就可以实现动态操作。 线性表的链式存储又可以分为五种：1、单链表结构 2、循环链表结构 3、双向链">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2018/07/29/5b5d4e1dcd248.jpg">
-<meta property="og:updated_time" content="2018-07-29T06:30:17.334Z">
+<meta property="og:updated_time" content="2018-07-29T06:38:55.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表（二） （C语言实现）">
+<meta name="twitter:title" content="线性表（二）--链式存储 （C语言实现）">
 <meta name="twitter:description" content="我要吐槽一下markdown的格式转换。。。代码的格式搞了好久。上传的时候一直出错。。不得已又去看了看它的语法。。就很烦。。 好了，吐槽完了就来说正事了，接上一章的顺序结构，这章我们讲讲链式储存结构，所谓链式存储，就是采用链式方式将结点链接起来的存储结构称为链表。不同于顺序结构，链表只需要改变节点地址就可以实现动态操作。 线性表的链式存储又可以分为五种：1、单链表结构 2、循环链表结构 3、双向链">
 <meta name="twitter:image" content="https://i.loli.net/2018/07/29/5b5d4e1dcd248.jpg">
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/29/线性表（二）/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/29/线性表（二）--链式结构/"/>
 
 
 
 
 
-  <title>线性表（二） （C语言实现） | 不 是我</title>
+  <title>线性表（二）--链式存储 （C语言实现） | 不 是我</title>
   
 
 
@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/29/线性表（二）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/29/线性表（二）--链式结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyjgod">
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">线性表（二） （C语言实现）</h1>
+          <h1 class="post-title" itemprop="name headline">线性表（二）--链式存储 （C语言实现）</h1>
         
 
         <div class="post-meta">
@@ -541,8 +541,8 @@ Node *Locate( LinkList L,ElemType key) / * 在带头结点的单链表 L 中查�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/29/线性表（一）/" rel="next" title="线性表（一） （C语言实现）">
-                <i class="fa fa-chevron-left"></i> 线性表（一） （C语言实现）
+              <a href="/2018/07/29/线性表（一）--顺序结构/" rel="next" title="线性表（一）--顺序存储 （C语言实现）">
+                <i class="fa fa-chevron-left"></i> 线性表（一）--顺序存储 （C语言实现）
               </a>
             
           </div>
@@ -550,6 +550,10 @@ Node *Locate( LinkList L,ElemType key) / * 在带头结点的单链表 L 中查�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/29/线性表（三）--链式结构实践/" rel="prev" title="线性表（三）--链式结构实践 （C语言实现）">
+                线性表（三）--链式结构实践 （C语言实现） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -669,6 +673,20 @@ Node *Locate( LinkList L,ElemType key) / * 在带头结点的单链表 L 中查�
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://nanfengx.top/" title="nanfengx" target="_blank">nanfengx</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
