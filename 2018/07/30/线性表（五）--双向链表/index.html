@@ -79,20 +79,21 @@
 
 
 
-<meta name="description" content="想不到把 还有四。。。。其实还有五六七八九。。。。。  通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。">
+<meta name="description" content="有了单向循环链表，我们路确定某一个结点的前趋，但是我们发现这需要遍历整个链表，如果希望从表中快速确定某一个结点的前趋，另一个解决方法就是在单链表的每个结点里再增加一个指向其前趋的指针域 prior。这样形成的链表中就有两条方向不同的链，就是双向链表。">
 <meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性表（四）--循环链表 （C语言实现）">
-<meta property="og:url" content="http://yoursite.com/2018/07/30/线性表（四）--循环链表/index.html">
+<meta property="og:title" content="线性表（五）--双向链表以及静态链表 （C语言实现）">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/线性表（五）--双向链表/index.html">
 <meta property="og:site_name" content="不 是我">
-<meta property="og:description" content="想不到把 还有四。。。。其实还有五六七八九。。。。。  通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。">
+<meta property="og:description" content="有了单向循环链表，我们路确定某一个结点的前趋，但是我们发现这需要遍历整个链表，如果希望从表中快速确定某一个结点的前趋，另一个解决方法就是在单链表的每个结点里再增加一个指向其前趋的指针域 prior。这样形成的链表中就有两条方向不同的链，就是双向链表。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2018/07/30/5b5e8325bb4e2.jpg">
-<meta property="og:updated_time" content="2018-07-30T07:24:59.688Z">
+<meta property="og:image" content="https://i.loli.net/2018/07/30/5b5ef6faddbb4.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/07/30/5b5efa29d1848.jpg">
+<meta property="og:updated_time" content="2018-07-30T11:55:48.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性表（四）--循环链表 （C语言实现）">
-<meta name="twitter:description" content="想不到把 还有四。。。。其实还有五六七八九。。。。。  通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。">
-<meta name="twitter:image" content="https://i.loli.net/2018/07/30/5b5e8325bb4e2.jpg">
+<meta name="twitter:title" content="线性表（五）--双向链表以及静态链表 （C语言实现）">
+<meta name="twitter:description" content="有了单向循环链表，我们路确定某一个结点的前趋，但是我们发现这需要遍历整个链表，如果希望从表中快速确定某一个结点的前趋，另一个解决方法就是在单链表的每个结点里再增加一个指向其前趋的指针域 prior。这样形成的链表中就有两条方向不同的链，就是双向链表。">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/30/5b5ef6faddbb4.jpg">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/30/线性表（四）--循环链表/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/30/线性表（五）--双向链表/"/>
 
 
 
 
 
-  <title>线性表（四）--循环链表 （C语言实现） | 不 是我</title>
+  <title>线性表（五）--双向链表以及静态链表 （C语言实现） | 不 是我</title>
   
 
 
@@ -255,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/线性表（四）--循环链表/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/线性表（五）--双向链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyjgod">
@@ -272,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">线性表（四）--循环链表 （C语言实现）</h1>
+          <h1 class="post-title" itemprop="name headline">线性表（五）--双向链表以及静态链表 （C语言实现）</h1>
         
 
         <div class="post-meta">
@@ -284,7 +285,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T14:11:56+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T19:32:17+08:00">
                 2018-07-30
               </time>
             
@@ -344,38 +345,42 @@
       
 
       
-        <p>想不到把 还有四。。。。其实还有五六七八九。。。。。</p>
-<p><img src="https://i.loli.net/2018/07/30/5b5e8325bb4e2.jpg" alt=""></p>
-<p>通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。<br><a id="more"></a><br>这样我们就可以从任一结点开始遍历整个链表，而不是只能从头结点开始。</p>
-<p>如何创建就不再细写了，可以参考之前文章中的头插法和尾插法。</p>
-<p>那么我们就来看看带头结点的循环单链表的一般形式循环单链表的合并吧。</p>
-<p>遍历两链表找表尾；将第一表尾链接第二表头，将第二表尾链接第一表头就可以了。</p>
-<pre><code>LinkList merge_ 1(LinkListLA,LinkList LB) 
-{  /*此算法将两个采用头指针的循环单链表的首尾连接起来*/ 
-    Node *p, *q; 
-    p=LA; q=LB; 
-    while (p-&gt;next!=LA) 
-        p=p-&gt;next; /*找到表LA的表尾，用p指向它*/ 
-    while (q-&gt;next!=LB) 
-        q=q-&gt;next; /*找到表LB的表尾，用q指向它*/ 
-    q-&gt;next=LA; /*修改表LB 的尾指针，使之指向表LA 的头结点*/ 
-    p-&gt;next=LB-&gt;next; /*修改表LA的尾指针，使之指向表LB 中的第一个结点*/ 
-    free(LB); 
-    return(LA); 
+        <p>有了单向循环链表，我们路确定某一个结点的前趋，但是我们发现这需要遍历整个链表，如果希望从表中快速确定某一个结点的前趋，另一个解决方法就是在单链表的每个结点里再增加一个指向其前趋的指针域 prior。这样形成的链表中就有两条方向不同的链，就是<strong>双向链表</strong>。<br><img src="https://i.loli.net/2018/07/30/5b5ef6faddbb4.jpg" alt=""><br><a id="more"></a><br>与单向链表不同，双向链表有两个指针域。所以定义如下：</p>
+<pre><code>typedef struct DNode 
+{     
+   ElemType data； 
+   struct DNode *prior，*next； 
+}DNode,* DoubleList； 
+</code></pre><p>事实上，双向链表也是由头指针唯一确定的，因为增加头结点能使双链表的某些运算变得方便。在双向链表中，那些只涉及后继指针的算法，如求表长度、取元素、元素定位等，与单链表中相应的算法相同，但对于前插和删除操作则涉及到前驱和后继两个方向的指针变化，因此与单链表中的算法不同。</p>
+<p>先来看看插入操作。</p>
+<pre><code>在双向链表第 i 个结点之前插入一个的新的结点
+int DlinkIns(DoubleList L,int i,ElemType e) 
+{ 
+     DNode  *s,*p; 
+     … /*先检查待插入的位置i是否合法（实现方法同单链表的前插操作）*/ 
+     … /*若位置i合法，则找到第i个结点并让指针p指向它*/ 
+     s=(DNode*)malloc(sizeof(DNode)); 
+      if (s) 
+      { 
+         s-&gt;data=e;       
+         s-&gt;prior=p-&gt;prior;      ① 
+         p-&gt;prior-&gt;next=s;      ② 
+         s-&gt;next=p;           ③ 
+         p-&gt;prior=s;           ④ 
+         return TRUE; 
+      }  
+      else return FALSE; 
 } 
-
-
-LinkList  merge_2（LinkList RA,LinkList RB） 
-{  /*此算法将两个采用尾指针的循环链表首尾连接起来*/ 
-    Node *p; 
-    p=RA-&gt;next; /*保存链表RA的头结点地址*/ 
-    RA-&gt;next=RB-&gt;next-&gt;next;/*链表RB的开始结点链到链表RA的终端结点之后*/  
-    free(RB-&gt;next);/*释放链表RB的头结点*/ 
-    RB-&gt;next=p;/*链表RA的头结点链到链表RB的终端结点之后*/ 
-    return  RB;/*返回新循环链表的尾指针*/ 
-} 
-</code></pre><p>这里有些地方需要说明一下，那就是可能-&gt;next-&gt;next有些绕，其实这是将其连到了第一个指针而不是头指针，这是有区别的。其次关于free（）函数，free()的调用方式是：void free(void   *ptr)。是释放由ptr所指的内存，并将它返回给堆，以便这些内存成为再分配时的可用内存，而不是将其置为null。<br>其实作为循环链表，连接时为什么非要找到头尾结点，我想了想，大概是因为头结点的存在吧，毕竟头结点对于整个表的内容是无关的。（当然也可能不是。。也可能可以随便找个结点。。。仍待考证。。。。）</p>
-<p><strong>总的来说，循环链表与单链表最大的区别就是可以从当前结点遍历所有结点。</strong></p>
+</code></pre><p>对于删除，实际上和单链表没有区别。<br>同样的双向链表也存在循环链表，和单链表区别不大，就不再累述了。<br>其实对于链表来说，只要能在脑海中有示例图，理解了之后就可以很轻松的写出来。</p>
+<p>之前介绍的链表，其实都是动态的。那么什么是静态链表呢。静态链表其实是数组模拟实现的链表。<br>静态链表的基本特征：<br>1.存储池：定义一个较大的结构数组作为备用结点空间<br>2.游标机制：每个结点应含有两个域：data域和next（或cursor）域</p>
+<pre><code>#define  Maxsize  链表可能达到的最大长度 typedef  struct 
+{
+    ElemType data;  
+    int cursor; 
+}Component, StaticList[Maxsize]; 
+</code></pre><p>对于静态链表的理解可能看了这幅图会好很多。</p>
+<p><img src="https://i.loli.net/2018/07/30/5b5efa29d1848.jpg" alt=""></p>
+<p>那么到这里线性表就结束了，没有六七八九。。。</p>
 
       
     </div>
@@ -406,8 +411,8 @@ LinkList  merge_2（LinkList RA,LinkList RB）
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/29/线性表（三）--链式结构实践/" rel="next" title="线性表（三）--链式结构实践 （C语言实现）">
-                <i class="fa fa-chevron-left"></i> 线性表（三）--链式结构实践 （C语言实现）
+              <a href="/2018/07/30/线性表（四）--循环链表/" rel="next" title="线性表（四）--循环链表 （C语言实现）">
+                <i class="fa fa-chevron-left"></i> 线性表（四）--循环链表 （C语言实现）
               </a>
             
           </div>
@@ -415,10 +420,6 @@ LinkList  merge_2（LinkList RA,LinkList RB）
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/30/线性表（五）--双向链表/" rel="prev" title="线性表（五）--双向链表以及静态链表 （C语言实现）">
-                线性表（五）--双向链表以及静态链表 （C语言实现） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
