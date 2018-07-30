@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Testing," />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
-<meta name="keywords" content="Testing">
+<meta name="description" content="想不到把 还有四。。。。其实还有五六七八九。。。。。  通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。 这样我们就可以从任一结点开始遍历整个链表，而不是只能从头结点开始。 如何创建就不再细写了，可以参考之前文章中">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典算法问题 - 最大连续子数列和">
-<meta property="og:url" content="http://yoursite.com/2018/07/24/最大上升子序列/index.html">
+<meta property="og:title" content="线性表（四）--循环链表 （C语言实现）">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/线性表（四）--循环链表/index.html">
 <meta property="og:site_name" content="不 是我">
-<meta property="og:description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
+<meta property="og:description" content="想不到把 还有四。。。。其实还有五六七八九。。。。。  通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。 这样我们就可以从任一结点开始遍历整个链表，而不是只能从头结点开始。 如何创建就不再细写了，可以参考之前文章中">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-24T06:23:42.869Z">
+<meta property="og:image" content="https://i.loli.net/2018/07/30/5b5e8325bb4e2.jpg">
+<meta property="og:updated_time" content="2018-07-30T06:11:57.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="经典算法问题 - 最大连续子数列和">
-<meta name="twitter:description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
+<meta name="twitter:title" content="线性表（四）--循环链表 （C语言实现）">
+<meta name="twitter:description" content="想不到把 还有四。。。。其实还有五六七八九。。。。。  通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。 这样我们就可以从任一结点开始遍历整个链表，而不是只能从头结点开始。 如何创建就不再细写了，可以参考之前文章中">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/30/5b5e8325bb4e2.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/24/最大上升子序列/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/30/线性表（四）--循环链表/"/>
 
 
 
 
 
-  <title>经典算法问题 - 最大连续子数列和 | 不 是我</title>
+  <title>线性表（四）--循环链表 （C语言实现） | 不 是我</title>
   
 
 
@@ -253,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/最大上升子序列/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/线性表（四）--循环链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyjgod">
@@ -270,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">经典算法问题 - 最大连续子数列和</h1>
+          <h1 class="post-title" itemprop="name headline">线性表（四）--循环链表 （C语言实现）</h1>
         
 
         <div class="post-meta">
@@ -282,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-24T12:40:43+08:00">
-                2018-07-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T14:11:56+08:00">
+                2018-07-30
               </time>
             
 
@@ -305,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -342,63 +344,39 @@
       
 
       
-        <p>最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。</p>
-<p>为了更清晰的理解问题，首先我们先看一组数据：<br>8<br>-2 6 -1 5 4 -7 2 3<br>第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。<br>对于这个序列，我们的答案应该是14，所选的数列是从第2个数到第5个数，这4个数的和是所有子数列中最大的。</p>
-<p><strong>最暴力的做法，复杂度O(N^3)</strong><br>暴力求解也是容易理解的做法，简单来说，我们只要用两层循环枚举起点和终点，这样就尝试了所有的子序列，然后计算每个子序列的和，然后找到其中最大的即可，C语言代码如下：</p>
-<pre><code>#include &lt;stdio.h&gt;
+        <p>想不到把 还有四。。。。其实还有五六七八九。。。。。</p>
+<p><img src="https://i.loli.net/2018/07/30/5b5e8325bb4e2.jpg" alt=""></p>
+<p>通过前面对单链表的学习，我们知道单链表只能从当前结点出发向后操作。那么啥叫循环链表结构嘞。循环循环，也就是首尾相接的链表，是不是很好理解。（我不会告诉你就是单链表的尾结点指向头结点或是第一个结点，一般仍以头结点表示一个链表）。。。。。</p>
+<p>这样我们就可以从任一结点开始遍历整个链表，而不是只能从头结点开始。</p>
+<p>如何创建就不再细写了，可以参考之前文章中的头插法和尾插法。</p>
+<p>那么我们就来看看带头结点的循环单链表的一般形式循环单链表的合并吧。</p>
+<p>遍历两链表找表尾；将第一表尾链接第二表头，将第二表尾链接第一表头就可以了。</p>
+<pre><code>LinkList merge_ 1(LinkListLA,LinkList LB) 
+{  /*此算法将两个采用头指针的循环单链表的首尾连接起来*/ 
+    Node *p, *q; 
+    p=LA; q=LB; 
+    while (p-&gt;next!=LA) 
+        p=p-&gt;next; /*找到表LA的表尾，用p指向它*/ 
+    while (q-&gt;next!=LB) 
+        q=q-&gt;next; /*找到表LB的表尾，用q指向它*/ 
+    q-&gt;next=LA; /*修改表LB 的尾指针，使之指向表LA 的头结点*/ 
+    p-&gt;next=LB-&gt;next; /*修改表LA的尾指针，使之指向表LB 中的第一个结点*/ 
+    free(LB); 
+    return(LA); 
+} 
 
-//N是数组长度，num是待计算的数组，放在全局区是因为可以开很大的数组
-int N, num[1024];
 
-int main()
-{
-//输入数据
-scanf(&quot;%d&quot;, &amp;N);
-for(int i = 1; i &lt;= N; i++)
-scanf(&quot;%d&quot;, &amp;num[i]);
-
-int ans = num[1]; //ans保存最大子序列和，初始化为num[1]能保证最终结果正确
-//i和j分别是枚举的子序列的起点和终点，k所在循环计算每个子序列的和
-for(int i = 1; i &lt;= N; i++) {
-for(int j = i; j &lt;= N; j++) {
-int s = 0;
-for(int k = i; k &lt;= j; k++) {
-s += num[k];
-}
-if(s &gt; ans) ans = s;
-}
-}
-printf(&quot;%d\n&quot;, ans);
-
-return 0;
-}
-</code></pre><p>这个算法的时间复杂度是O(N^3)，复杂度的计算方法可参考《算法导论》第一章，如果我们的计算机可以每秒计算一亿次的话，这个算法在一秒内只能计算出500左右长度序列的答案。</p>
-<p><strong>动态规划的魅力，O(N)解决！</strong><br>很多动态规划算法非常像数学中的递推。我们如果能找到一个合适的递推公式，就能很容易的解决问题。<br>我们用dp[n]表示以第n个数结尾的最大连续子序列的和，于是存在以下递推公式：<br>dp[n] = max(0, dp[n-1]) + num[n]<br>仔细思考后不难发现这个递推公式是正确的，则整个问题的答案是max(dp[m]) | m∈[1, N]。C语言代码如下：</p>
-<pre><code>#include &lt;stdio.h&gt;
-
-//N是数组长度，num是待计算的数组，放在全局区是因为可以开很大的数组
-int N, num[134217728];
-
-int main()
-{
-//输入数据
-scanf(&quot;%d&quot;, &amp;N);
-for(int i = 1; i &lt;= N; i++)
-scanf(&quot;%d&quot;, &amp;num[i]);
-
-num[0] = 0;
-int ans = num[1];
-for(int i = 1; i &lt;= N; i++) {
-if(num[i - 1] &gt; 0) num[i] += num[i - 1];
-else num[i] += 0;
-if(num[i] &gt; ans) ans = num[i];
-}
-
-printf(&quot;%d\n&quot;, ans);
-
-return 0;
-}
-</code></pre><p>文章来自：<a href="http://conw.net/archives/9/" target="_blank" rel="noopener">http://conw.net/archives/9/</a></p>
+LinkList  merge_2（LinkList RA,LinkList RB） 
+{  /*此算法将两个采用尾指针的循环链表首尾连接起来*/ 
+    Node *p; 
+    p=RA-&gt;next; /*保存链表RA的头结点地址*/ 
+    RA-&gt;next=RB-&gt;next-&gt;next;/*链表RB的开始结点链到链表RA的终端结点之后*/  
+    free(RB-&gt;next);/*释放链表RB的头结点*/ 
+    RB-&gt;next=p;/*链表RA的头结点链到链表RB的终端结点之后*/ 
+    return  RB;/*返回新循环链表的尾指针*/ 
+} 
+</code></pre><p>这里有些地方需要说明一下，那就是可能-&gt;next-&gt;next有些绕，其实这是将其连到了第一个指针而不是头指针，这是有区别的。其次关于free（）函数，free()的调用方式是：void free(void   *ptr)。是释放由ptr所指的内存，并将它返回给堆，以便这些内存成为再分配时的可用内存，而不是将其置为null。<br>其实作为循环链表，连接时为什么非要找到头尾结点，我想了想，大概是因为头结点的存在吧，毕竟头结点对于整个表的内容是无关的。（当然也可能不是。。也可能可以随便找个结点。。。仍待考证。。。。）</p>
+<p><strong>总的来说，循环链表与单链表最大的区别就是可以从当前结点遍历所有结点。</strong></p>
 
       
     </div>
@@ -416,7 +394,7 @@ return 0;
       
         <div class="post-tags">
           
-            <a href="/tags/Testing/" rel="tag"># Testing</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -429,15 +407,15 @@ return 0;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/29/线性表（三）--链式结构实践/" rel="next" title="线性表（三）--链式结构实践 （C语言实现）">
+                <i class="fa fa-chevron-left"></i> 线性表（三）--链式结构实践 （C语言实现）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/29/线性表（一）--顺序结构/" rel="prev" title="线性表（一）--顺序存储 （C语言实现）">
-                线性表（一）--顺序存储 （C语言实现） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
