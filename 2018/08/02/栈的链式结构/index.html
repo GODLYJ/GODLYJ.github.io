@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="one man one pack">
-<meta property="og:type" content="website">
-<meta property="og:title" content="不 是我">
-<meta property="og:url" content="http://yoursite.com/categories/算法/index.html">
+<meta name="description" content="是不是很奇怪，和线性表不同，栈的运算方向是确定的那为什么还要区分顺序结构和链式结构呢。其实这是从内存来考虑的。采用链栈不必预先估计栈的最大容量，只要系统有可用空间，链栈就不会出现溢出。采用链栈时，栈的各种基本操作的实现与单链表的操作类似，对于链栈，在使用完毕时，应该释放其空间。 链栈的结构可用 C 语言定义如下： typedef struct node  {      StackElementTy">
+<meta name="keywords" content="Data Structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="栈的链式结构（C语言实现）">
+<meta property="og:url" content="http://yoursite.com/2018/08/02/栈的链式结构/index.html">
 <meta property="og:site_name" content="不 是我">
-<meta property="og:description" content="one man one pack">
+<meta property="og:description" content="是不是很奇怪，和线性表不同，栈的运算方向是确定的那为什么还要区分顺序结构和链式结构呢。其实这是从内存来考虑的。采用链栈不必预先估计栈的最大容量，只要系统有可用空间，链栈就不会出现溢出。采用链栈时，栈的各种基本操作的实现与单链表的操作类似，对于链栈，在使用完毕时，应该释放其空间。 链栈的结构可用 C 语言定义如下： typedef struct node  {      StackElementTy">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-02T02:55:15.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不 是我">
-<meta name="twitter:description" content="one man one pack">
+<meta name="twitter:title" content="栈的链式结构（C语言实现）">
+<meta name="twitter:description" content="是不是很奇怪，和线性表不同，栈的运算方向是确定的那为什么还要区分顺序结构和链式结构呢。其实这是从内存来考虑的。采用链栈不必预先估计栈的最大容量，只要系统有可用空间，链栈就不会出现溢出。采用链栈时，栈的各种基本操作的实现与单链表的操作类似，对于链栈，在使用完毕时，应该释放其空间。 链栈的结构可用 C 语言定义如下： typedef struct node  {      StackElementTy">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/算法/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/02/栈的链式结构/"/>
 
 
 
 
 
-  <title>Category: 算法 | 不 是我</title>
+  <title>栈的链式结构（C语言实现） | 不 是我</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,55 +239,205 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>算法<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/02/栈的链式结构/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lyjgod">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不 是我">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/24/最大上升子序列/" itemprop="url">
-              
-                <span itemprop="name">经典算法问题 - 最大连续子数列和</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">栈的链式结构（C语言实现）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-24T12:40:43+08:00"
-              content="2018-07-24" >
-          07-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-02T10:55:15+08:00">
+                2018-08-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>是不是很奇怪，和线性表不同，栈的运算方向是确定的那为什么还要区分顺序结构和链式结构呢。其实这是从内存来考虑的。采用链栈不必预先估计栈的最大容量，只要系统有可用空间，链栈就不会出现溢出。采用链栈时，栈的各种基本操作的实现与单链表的操作类似，对于链栈，在使用完毕时，应该释放其空间。</p>
+<p>链栈的结构可用 C 语言定义如下：</p>
+<pre><code>typedef struct node 
+{ 
+    StackElementType  data;           
+    struct node   *next; 
+}LinkStackNode; 
+
+typedef  LinkStackNode  *LinkStack; 
+</code></pre><p>关于链栈的初始化，其实可以参考之前线性表的链式结构，区别不大。至于存入和弹出的操作，由于涉及指针操作，和顺序结构还是有很大不同的。不过理解的要点还是一样，就是考虑top指针的位置以及指向。（个人的理解是把top指针理解为线性表的头指针差不多）</p>
+<pre><code>//进栈操作 
+int Push(LinkStack top, StackElementType x) 
+/* 将数据元素 x 压入栈 top 中 */   
+{ 
+    LinkStackNode * temp; 
+    temp=(LinkStackNode * )malloc(sizeof(LinkStackNode));  
+    if(temp==NULL)  
+          return(FALSE);   /* 申请空间失败 */  
+    temp-&gt;data=x;
+    temp-&gt;next=top-&gt;next; 
+    top-&gt;next=temp;   /* 修改当前栈顶指针 */  
+    return(TRUE); 
+} 
+
+//出栈操作 
+int Pop(LinkStack top, StackElementType *x) 
+{  /* 将栈 top 的栈顶元素弹出，放到 x 所指的存储空间中 */ 
+      LinkStackNode * temp;
+      temp=top-&gt;next; 
+      if(temp==NULL)  /*栈为空*/      
+         return(FALSE); 
+      top-&gt;next=temp-&gt;next; 
+      *x=temp-&gt;data; 
+       free(temp);   /* 释放存储空间 */ 
+      return(TRUE); 
+} 
+</code></pre><p>如果要操作多栈，其实只需要搞一个指针数组，然后每个格子里装一个栈的top指针就可以了。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/01/栈的定义以及栈的顺序结构/" rel="next" title="栈的定义以及栈的顺序结构（C语言实现）">
+                <i class="fa fa-chevron-left"></i> 栈的定义以及栈的顺序结构（C语言实现）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -293,6 +445,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODQ2NS8xNDk5Mw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -549,6 +710,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -577,6 +742,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
