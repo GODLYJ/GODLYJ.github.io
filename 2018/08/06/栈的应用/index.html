@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Testing," />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
-<meta name="keywords" content="Testing">
+<meta name="description" content="哇，发现自己好久好久没有更了。。 我们在之前学习了栈的顺序结构以及链式结构的定义，对于栈有了一定的了解。那么为了加深对于栈的理解。我们接下来要做一些题目。 首先是经典的括号匹配问题。括号匹配问题假设表达式中包含三种括号：圆括号、方括号和花括号，它们可互相嵌套，如 ( [ { } ] ( [ ] ) )或( { ( [ ] [ (  ) ] ) } )等均为正确的格式，而 { [ ] } ) }或">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典算法问题 - 最大连续子数列和">
-<meta property="og:url" content="http://yoursite.com/2018/07/24/最大上升子序列/index.html">
+<meta property="og:title" content="栈的应用（C语言实现）">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/栈的应用/index.html">
 <meta property="og:site_name" content="不 是我">
-<meta property="og:description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
+<meta property="og:description" content="哇，发现自己好久好久没有更了。。 我们在之前学习了栈的顺序结构以及链式结构的定义，对于栈有了一定的了解。那么为了加深对于栈的理解。我们接下来要做一些题目。 首先是经典的括号匹配问题。括号匹配问题假设表达式中包含三种括号：圆括号、方括号和花括号，它们可互相嵌套，如 ( [ { } ] ( [ ] ) )或( { ( [ ] [ (  ) ] ) } )等均为正确的格式，而 { [ ] } ) }或">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-30T07:24:47.913Z">
+<meta property="og:image" content="https://i.loli.net/2018/08/06/5b680f05cc214.png">
+<meta property="og:updated_time" content="2018-08-06T09:24:41.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="经典算法问题 - 最大连续子数列和">
-<meta name="twitter:description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
+<meta name="twitter:title" content="栈的应用（C语言实现）">
+<meta name="twitter:description" content="哇，发现自己好久好久没有更了。。 我们在之前学习了栈的顺序结构以及链式结构的定义，对于栈有了一定的了解。那么为了加深对于栈的理解。我们接下来要做一些题目。 首先是经典的括号匹配问题。括号匹配问题假设表达式中包含三种括号：圆括号、方括号和花括号，它们可互相嵌套，如 ( [ { } ] ( [ ] ) )或( { ( [ ] [ (  ) ] ) } )等均为正确的格式，而 { [ ] } ) }或">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/06/5b680f05cc214.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/24/最大上升子序列/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/06/栈的应用/"/>
 
 
 
 
 
-  <title>经典算法问题 - 最大连续子数列和 | 不 是我</title>
+  <title>栈的应用（C语言实现） | 不 是我</title>
   
 
 
@@ -253,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/最大上升子序列/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/06/栈的应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyjgod">
@@ -270,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">经典算法问题 - 最大连续子数列和</h1>
+          <h1 class="post-title" itemprop="name headline">栈的应用（C语言实现）</h1>
         
 
         <div class="post-meta">
@@ -282,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-24T12:40:43+08:00">
-                2018-07-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-06T17:24:41+08:00">
+                2018-08-06
               </time>
             
 
@@ -305,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -342,62 +344,117 @@
       
 
       
-        <p><font size="6">最大连续子数列和</font>一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。</p>
-<p>为了更清晰的理解问题，首先我们先看一组数据：<br>8<br>-2 6 -1 5 4 -7 2 3<br>第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。<br>对于这个序列，我们的答案应该是14，所选的数列是从第2个数到第5个数，这4个数的和是所有子数列中最大的。<br><a id="more"></a><br><strong>最暴力的做法，复杂度O(N^3)</strong><br>暴力求解也是容易理解的做法，简单来说，我们只要用两层循环枚举起点和终点，这样就尝试了所有的子序列，然后计算每个子序列的和，然后找到其中最大的即可，C语言代码如下：</p>
-<pre><code>#include &lt;stdio.h&gt;
+        <p>哇，发现自己好久好久没有更了。。</p>
+<p>我们在之前学习了栈的顺序结构以及链式结构的定义，对于栈有了一定的了解。那么为了加深对于栈的理解。我们接下来要做一些题目。</p>
+<p>首先是<strong>经典的括号匹配问题</strong>。<br>括号匹配问题假设表达式中包含三种括号：<strong>圆括号、方括号和花括号</strong>，它们可互相嵌套，如 ( [ { } ] ( [ ] ) )或( { ( [ ] [ (  ) ] ) } )等均为正确的格式，而 { [ ] } ) }或 { [ ( ) ] 或 ( [ ] }均为不正确的格式。<br>那么我们在检验算法中可设置一个栈，每读入一个括号，若是左括号，则直接入栈，等待相匹配的同类右括号；若读入的是右括号，且与当前栈顶的左括号同类型，则二者匹配，将栈顶的左括号出栈，否则属于不合法的情况。另外，如果输入序列已读尽，而栈中仍有等待匹配的左括号，或者读入了一个右括号，而栈中已无等待匹配的左括号，均属不合法的情况。当输入序列和栈同时变为空时，说明所有括号完全匹配。<br>（这题总让我想到一些不好的往事）。</p>
+<p>好了有了最基础的思考，我们就可以写出代码了</p>
+<pre><code>void BracketMatch(char *str) 
+/* str[]中为输入的字符串，利用堆栈技术来检查该字符串中的括号是否匹配*/ 
+{ 
+     Stack S; int i; char ch; 
+     InitStack(&amp;S); 
+     For(i=0; str[i]!=’\0’; i++)   /*对字符串中的字符逐一扫描*/ 
+     { 
+         switch(str[i]){   
+         case ‘(‘:Push(&amp;S,str[i]); break; 
+         case ‘[‘:Push(&amp;S,str[i]); break; 
+         case ‘{‘:Push(&amp;S,str[i]); break;   
+         case ‘)’: 
+                  if(IsEmpty(&amp;S)) 
+                  { 
+                     printf(&quot;\n右括号多余!&quot;);  
+                     return;
+                  } 
+                  else 
+                  { 
+                     GetTop (&amp;S,&amp;ch); 
+                     if(Match(ch,str[i]))  /*用Match判断两个括号是否匹配*/
+                        Pop(&amp;S,&amp;ch);  /*已匹配的左括号出栈*/
+                     else 
+                     { 
+                        printf(&quot;\n对应的左右括号不同类!&quot;);  
+                         return;
+                     } 
+                  }  
+                  break;  
 
-//N是数组长度，num是待计算的数组，放在全局区是因为可以开很大的数组
-int N, num[1024];
+         case ‘]’:   
+                  if(IsEmpty(&amp;S)) 
+                  { 
+                     printf(&quot;\n右括号多余!&quot;);  
+                     return;
+                  } 
+                  else 
+                  { 
+                     GetTop (&amp;S,&amp;ch); 
+                     if(Match(ch,str[i]))  /*用Match判断两个括号是否匹配*/
+                        Pop(&amp;S,&amp;ch);  /*已匹配的左括号出栈*/
+                     else 
+                     { 
+                        printf(&quot;\n对应的左右括号不同类!&quot;);  
+                         return;
+                     } 
+                  }    
+                      break;  
+         case ‘}’: 
+                  if(IsEmpty(&amp;S)) 
+                  { 
+                     printf(&quot;\n右括号多余!&quot;);  
+                     return;
+                  } 
+                  else 
+                  { 
+                     GetTop (&amp;S,&amp;ch); 
+                     if(Match(ch,str[i]))  /*用Match判断两个括号是否匹配*/
+                        Pop(&amp;S,&amp;ch);  /*已匹配的左括号出栈*/
+                     else 
+                     { 
+                        printf(&quot;\n对应的左右括号不同类!&quot;);  
+                         return;
+                     } 
+                  }  break; 
 
-int main()
-{
-//输入数据
-scanf(&quot;%d&quot;, &amp;N);
-for(int i = 1; i &lt;= N; i++)
-scanf(&quot;%d&quot;, &amp;num[i]);
-
-int ans = num[1]; //ans保存最大子序列和，初始化为num[1]能保证最终结果正确
-//i和j分别是枚举的子序列的起点和终点，k所在循环计算每个子序列的和
-for(int i = 1; i &lt;= N; i++) {
-for(int j = i; j &lt;= N; j++) {
-int s = 0;
-for(int k = i; k &lt;= j; k++) {
-s += num[k];
-}
-if(s &gt; ans) ans = s;
-}
-}
-printf(&quot;%d\n&quot;, ans);
-
-return 0;
-}
-</code></pre><p>这个算法的时间复杂度是O(N^3)，复杂度的计算方法可参考《算法导论》第一章，如果我们的计算机可以每秒计算一亿次的话，这个算法在一秒内只能计算出500左右长度序列的答案。</p>
-<p><strong>动态规划的魅力，O(N)解决！</strong><br>很多动态规划算法非常像数学中的递推。我们如果能找到一个合适的递推公式，就能很容易的解决问题。<br>我们用dp[n]表示以第n个数结尾的最大连续子序列的和，于是存在以下递推公式：<br>dp[n] = max(0, dp[n-1]) + num[n]<br>仔细思考后不难发现这个递推公式是正确的，则整个问题的答案是max(dp[m]) | m∈[1, N]。C语言代码如下：</p>
-<pre><code>#include &lt;stdio.h&gt;
-
-//N是数组长度，num是待计算的数组，放在全局区是因为可以开很大的数组
-int N, num[134217728];
-
-int main()
-{
-//输入数据
-scanf(&quot;%d&quot;, &amp;N);
-for(int i = 1; i &lt;= N; i++)
-scanf(&quot;%d&quot;, &amp;num[i]);
-
-num[0] = 0;
-int ans = num[1];
-for(int i = 1; i &lt;= N; i++) {
-if(num[i - 1] &gt; 0) num[i] += num[i - 1];
-else num[i] += 0;
-if(num[i] &gt; ans) ans = num[i];
-}
-
-printf(&quot;%d\n&quot;, ans);
-
-return 0;
-}
-</code></pre><p>文章来自：<a href="http://conw.net/archives/9/" target="_blank" rel="noopener">http://conw.net/archives/9/</a></p>
+     if(IsEmpty(&amp;S))  
+         printf(&quot;\n括号匹配!&quot;); 
+     else 
+     printf(&quot;\n左括号多余!&quot;); 
+} 
+</code></pre><p>这个看上去很多其实很好理解。重点在与如何进行左右括号的匹配，因为匹配有顺序，所以栈可以满足这个算法。</p>
+<p>另一个经典算法是<strong>表达式求和</strong>。</p>
+<p>表达式求值是高级语言编译的一个基本问题，是栈的典型应用实例。任何一个表达式都是由运算数(operand)、运算符(operator)和界限符(delimiter)组成的。运算数既可以是常数，也可以是被说明为变量或常量的标识符；运算符可以分为算术运算符、关系运算符和逻辑运算符三类；基本界限符有左右括号和表达式结束符等。仅讨论无括号算术表达式求值的求值问题。<br>由于某些运算符可能具有比别的运算符更高的优先级，因此表达式求值不可能严格地从左到右进行，比如3+4*5。这就不是从左算到右了。</p>
+<p>那么我们可以有以下思考。<br>（1）规定运算符的优先级表<br>（2）设置两个栈：OVS(运算数栈)、OPTR(运算符栈)<br>（3）自左向右扫描，进行如下处理：<br>遇到运算数则进 OVS 栈；<br>遇到运算符则与 OPTR 栈的栈顶运算符进行优先级比较：<br> 1、如果当前运算符&gt;OPTR 栈顶运算符，则当前运算符进 OPTR 栈；<br> 2、如果当前运算符≤OPTR 栈顶运算符，则 OPTR 退栈一次，得到栈顶运算符θ，OVS 连续退栈两次，得到运算数 a、运算数 b，对 a，b 执行θ运算，得到结果 T(i)，将 T(i) 进OVS 栈。 </p>
+<p>这个用文字可能难以表示清楚，我也找到了一张图，这个图是运算A/B↑C+D*E#的表达式。<br><img src="https://i.loli.net/2018/08/06/5b680f05cc214.png" alt=""></p>
+<p>因此我们可以po出代码</p>
+<pre><code>int ExpEvaluation() 
+/*读入一个简单算术表达式并计算其值。operator和operand分别为运算符栈和运算数栈，
+OPS为运算符集合*/ 
+{ 
+ InitStack(&amp;operand); 
+ InitStack(&amp;operator);  
+ Push(&amp;operator,&apos;#&apos;);  
+ printf(&quot;\n\nPlease input an expression (Ending with #) :&quot;);  ch=getchar();  
+ while(ch!=&apos;#&apos;||GetTop(operator)!=&apos;#&apos;) /* GetTop()通过函数值返回栈顶元素*/ 
+ {
+    if(!In(ch,OPS))   /*不是操作符，是操作数*/ 
+    {  
+       n=GetNumber(ch);push(&amp;operand,n); 
+    } 
+    else 
+    switch(Compare(ch, GetTop(operator))) //比较运算符的优先级
+    { 
+       case &apos;&gt;&apos;:  Push(&amp;operator,ch);   ch=getchar();  break;  
+       case &apos;=&apos;:  
+       case &apos;&lt;&apos;:
+                Pop(&amp;operator,&amp;op); 
+                Pop(&amp;operand,&amp;b);  
+                Pop(&amp;operand,&amp;a); 
+                v=Execute(a,op,b);  /* 对a和b进行op运算 */ 
+                Push(&amp;operand,v); break; 
+   } 
+} 
+ v=GetTop(operand); return (v); 
+} 
+</code></pre><p>也就是通过不断的while循环来找到有限算的表达式。</p>
 
       
     </div>
@@ -415,7 +472,7 @@ return 0;
       
         <div class="post-tags">
           
-            <a href="/tags/Testing/" rel="tag"># Testing</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -428,14 +485,18 @@ return 0;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/02/栈的链式结构/" rel="next" title="栈的链式结构（C语言实现）">
+                <i class="fa fa-chevron-left"></i> 栈的链式结构（C语言实现）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/29/线性表（一）--顺序结构/" rel="prev" title="线性表（一）--顺序存储 （C语言实现）">
-                线性表（一）--顺序存储 （C语言实现） <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/08/栈与递归/" rel="prev" title="栈与递归（C语言实现）">
+                栈与递归（C语言实现） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
