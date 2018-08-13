@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Testing," />
+  <meta name="keywords" content="Data Structure," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
-<meta name="keywords" content="Testing">
+<meta name="description" content="队列其实和栈一样，也是一种限定性线性表，只不过队列的操作顺序与栈不同，栈是后进先出，而队列是先进先出。在队列中，允许插入的一端称为队尾。而允许删除的一端称为队头。  数据元素：可以是任意类型的数据，但必须属于同一个数据对象。关系：队列中数据元素之间是线性关系。基本操作：（1）InitQueue(&amp;amp;Q)：初始化操作。设置一个空队列。（2）IsEmpty(Q)：判空操作。若队列为空，则返回TR">
+<meta name="keywords" content="Data Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典算法问题 - 最大连续子数列和">
-<meta property="og:url" content="http://yoursite.com/2018/07/24/最大上升子序列/index.html">
+<meta property="og:title" content="队列（C语言实现）">
+<meta property="og:url" content="http://yoursite.com/2018/08/13/队列/index.html">
 <meta property="og:site_name" content="不 是我">
-<meta property="og:description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
+<meta property="og:description" content="队列其实和栈一样，也是一种限定性线性表，只不过队列的操作顺序与栈不同，栈是后进先出，而队列是先进先出。在队列中，允许插入的一端称为队尾。而允许删除的一端称为队头。  数据元素：可以是任意类型的数据，但必须属于同一个数据对象。关系：队列中数据元素之间是线性关系。基本操作：（1）InitQueue(&amp;amp;Q)：初始化操作。设置一个空队列。（2）IsEmpty(Q)：判空操作。若队列为空，则返回TR">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-30T07:24:47.913Z">
+<meta property="og:image" content="https://i.loli.net/2018/08/13/5b70d0f1527b9.jpg">
+<meta property="og:updated_time" content="2018-08-13T00:50:12.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="经典算法问题 - 最大连续子数列和">
-<meta name="twitter:description" content="最大连续子数列和一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。 为了更清晰的理解问题，首先我们先看一组数据：8-2 6 -1 5 4 -7 2 3第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。对于这个序列，我们的答案应该是14，所选的数列是从第">
+<meta name="twitter:title" content="队列（C语言实现）">
+<meta name="twitter:description" content="队列其实和栈一样，也是一种限定性线性表，只不过队列的操作顺序与栈不同，栈是后进先出，而队列是先进先出。在队列中，允许插入的一端称为队尾。而允许删除的一端称为队头。  数据元素：可以是任意类型的数据，但必须属于同一个数据对象。关系：队列中数据元素之间是线性关系。基本操作：（1）InitQueue(&amp;amp;Q)：初始化操作。设置一个空队列。（2）IsEmpty(Q)：判空操作。若队列为空，则返回TR">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/13/5b70d0f1527b9.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/24/最大上升子序列/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/13/队列/"/>
 
 
 
 
 
-  <title>经典算法问题 - 最大连续子数列和 | 不 是我</title>
+  <title>队列（C语言实现） | 不 是我</title>
   
 
 
@@ -253,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/最大上升子序列/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/13/队列/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lyjgod">
@@ -270,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">经典算法问题 - 最大连续子数列和</h1>
+          <h1 class="post-title" itemprop="name headline">队列（C语言实现）</h1>
         
 
         <div class="post-meta">
@@ -282,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-24T12:40:43+08:00">
-                2018-07-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-13T08:50:11+08:00">
+                2018-08-13
               </time>
             
 
@@ -305,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -342,63 +344,69 @@
       
 
       
-        <p><font size="6">最大连续子数列和</font>一道很经典的算法问题，给定一个数列，其中可能有正数也可能有负数，我们的任务是找出其中连续的一个子数列（不允许空序列），使它们的和尽可能大。我们一起用多种方式，逐步优化解决这个问题。</p>
-<p>为了更清晰的理解问题，首先我们先看一组数据：<br>8<br>-2 6 -1 5 4 -7 2 3<br>第一行的8是说序列的长度是8，然后第二行有8个数字，即待计算的序列。<br>对于这个序列，我们的答案应该是14，所选的数列是从第2个数到第5个数，这4个数的和是所有子数列中最大的。<br><a id="more"></a><br><strong>最暴力的做法，复杂度O(N^3)</strong><br>暴力求解也是容易理解的做法，简单来说，我们只要用两层循环枚举起点和终点，这样就尝试了所有的子序列，然后计算每个子序列的和，然后找到其中最大的即可，C语言代码如下：</p>
-<pre><code>#include &lt;stdio.h&gt;
+        <p>队列其实和栈一样，也是一种限定性线性表，只不过队列的操作顺序与栈不同，栈是后进先出，而队列是先进先出。<br><strong>在队列中，允许插入的一端称为队尾。而允许删除的一端称为队头。</strong></p>
+<p><img src="https://i.loli.net/2018/08/13/5b70d0f1527b9.jpg" alt=""></p>
+<p><strong>数据元素：</strong>可以是任意类型的数据，但必须属于同一个数据对象。<br><strong>关系：</strong>队列中数据元素之间是线性关系。<br><strong>基本操作：</strong><br>（1）InitQueue(&amp;Q)：初始化操作。设置一个空队列。<br>（2）IsEmpty(Q)：判空操作。若队列为空，则返回TRUE，否则返回FALSE。<br>（3）IsFull(Q)：判满操作。若队列为满，则返回TRUE，否则返回FALSE。<br>（4）EnterQueue(&amp;Q，x)：进队操作。在队列Q的队尾插入x。操作成功，返回值为TRUE，否则返回值为FALSE。<br>（5）DeleteQueue(&amp;Q,&amp;x)：出队操作。使队列Q的队头元素出队，并用x带回其值。操作成功，返回值为TRUE，否则返回值为FALSE。<br>（6）GetHead（Q,&amp;x）：取队头元素操作。用x取得队头元素的值。操作成功，返回 TRUE，否则返回值为FALSE。<br>（7）ClearQueue(&amp;Q)：队列置空操作。将队列Q置为空队列。<br>（8）DestroyQueue(&amp;Q)： 队列销毁操作。释放队列的空间。 </p>
+<p>但是，队列的定义与栈的定义有点不一样。到底怎么个不一样法呢？那就来看看呗。</p>
+<pre><code>链队列定义如下： 
+typedef struct Node 
+{ 
+    QueueElementType  data; /*数据域*/   
+    struct Node*next; /*指针域*/ 
+}LinkQueueNode; 
 
-//N是数组长度，num是待计算的数组，放在全局区是因为可以开很大的数组
-int N, num[1024];
+typedef struct  
+{ 
+    LinkQueueNode   * front; 
+    LinkQueueNode   * rear; 
+}LinkQueue; 
+</code></pre><p>为什么这里需要两个typedef呢，感觉明明可以合起来用一个进行表示的阿。这个lyjgod也想了很久。不过花点时间还是可以理解的，其实我们可以将第一个typedef不看作是队列，而看成是队列中的一个个结点，而第二个定义才是队列本命。这是为什么呢，因为队列的操作模式要求我们要顾及的是队头和队尾，而不是中间的各个结点，因此，我们需要考虑到的只是有头指针和尾指针的LinkQueue而已，因为有了这两个我们就可以进行队列的所有操作了。<strong>当头尾指针指向同一个地址时，说明此时队列为空。（并不一定是指向NULL）</strong></p>
+<p>那么有了队列的定义，我们就可以进行队列的基本操作了。这理解列出队列最最基本的三个操作：初始化、入队、出队。</p>
+<pre><code>链队列初始化 
+int InitQueue(LinkQueue * Q) 
+{ /* 将 Q 初始化为一个空的链队列 */ 
+  Q-&gt;front=(LinkQueueNode *)malloc(sizeof(LinkQueueNode));   
+  if(Q-&gt;front!=NULL) 
+    { 
+          Q-&gt;rear=Q-&gt;front;            
+        Q-&gt;front-&gt;next=NULL;            
+          return(TRUE); 
+     } 
+  else   
+       return(FALSE);/* 溢出！*/ 
+} 
 
-int main()
-{
-//输入数据
-scanf(&quot;%d&quot;, &amp;N);
-for(int i = 1; i &lt;= N; i++)
-scanf(&quot;%d&quot;, &amp;num[i]);
+链队列入队操作算法 
+int EnterQueue(LinkQueue *Q, QueueElementType x) 
+{  /* 将数据元素 x 插入到队列 Q 中 */ 
+  LinkQueueNode  * NewNode; 
+  NewNode=(LinkQueueNode * )malloc(sizeof(LinkQueueNode)); 
+if(NewNode!=NULL) 
+{ 
+   NewNode-&gt;data=x; 
+   NewNode-&gt;next=NULL; 
+   Q-&gt;rear-&gt;next=NewNode; 
+   Q-&gt;rear=NewNode; return(TRUE); 
+} 
+  else  return(FALSE);/* 溢出！*/ 
+} 
 
-int ans = num[1]; //ans保存最大子序列和，初始化为num[1]能保证最终结果正确
-//i和j分别是枚举的子序列的起点和终点，k所在循环计算每个子序列的和
-for(int i = 1; i &lt;= N; i++) {
-for(int j = i; j &lt;= N; j++) {
-int s = 0;
-for(int k = i; k &lt;= j; k++) {
-s += num[k];
-}
-if(s &gt; ans) ans = s;
-}
-}
-printf(&quot;%d\n&quot;, ans);
 
-return 0;
-}
-</code></pre><p>这个算法的时间复杂度是O(N^3)，复杂度的计算方法可参考《算法导论》第一章，如果我们的计算机可以每秒计算一亿次的话，这个算法在一秒内只能计算出500左右长度序列的答案。</p>
-<p><strong>动态规划的魅力，O(N)解决！</strong><br>很多动态规划算法非常像数学中的递推。我们如果能找到一个合适的递推公式，就能很容易的解决问题。<br>我们用dp[n]表示以第n个数结尾的最大连续子序列的和，于是存在以下递推公式：<br>dp[n] = max(0, dp[n-1]) + num[n]<br>仔细思考后不难发现这个递推公式是正确的，则整个问题的答案是max(dp[m]) | m∈[1, N]。C语言代码如下：</p>
-<pre><code>#include &lt;stdio.h&gt;
-
-//N是数组长度，num是待计算的数组，放在全局区是因为可以开很大的数组
-int N, num[134217728];
-
-int main()
-{
-//输入数据
-scanf(&quot;%d&quot;, &amp;N);
-for(int i = 1; i &lt;= N; i++)
-scanf(&quot;%d&quot;, &amp;num[i]);
-
-num[0] = 0;
-int ans = num[1];
-for(int i = 1; i &lt;= N; i++) {
-if(num[i - 1] &gt; 0) num[i] += num[i - 1];
-else num[i] += 0;
-if(num[i] &gt; ans) ans = num[i];
-}
-
-printf(&quot;%d\n&quot;, ans);
-
-return 0;
-}
-</code></pre><p>文章来自：<a href="http://conw.net/archives/9/" target="_blank" rel="noopener">http://conw.net/archives/9/</a></p>
-
+链队列出队操作算法 
+int DeleteQueue(LinkQueue * Q, QueueElementType *x) 
+{  /* 将队列 Q 的队头元素出队，并存放到 x 所指的存储空间中 */ 
+  LinkQueueNode * p; 
+  if(Q-&gt;front==Q-&gt;rear)
+     return(FALSE); 
+  p=Q-&gt;front-&gt;next; 
+  Q-&gt;front-&gt;next=p-&gt;next;  /* 队头元素 p 出队 */ 
+  if(Q-&gt;rear==p)  /* 如果队中只有一个元素 p，则 p 出队后成为空队*/ 
+      Q-&gt;rear=Q-&gt;front;   
+  *x=p-&gt;data; 
+  free(p);   /* 释放存储空间 */ 
+  return(TRUE);  
+} 
+</code></pre>
       
     </div>
     
@@ -415,7 +423,7 @@ return 0;
       
         <div class="post-tags">
           
-            <a href="/tags/Testing/" rel="tag"># Testing</a>
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
           
         </div>
       
@@ -428,15 +436,15 @@ return 0;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/08/栈与递归/" rel="next" title="栈与递归（C语言实现）">
+                <i class="fa fa-chevron-left"></i> 栈与递归（C语言实现）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/29/线性表（一）--顺序结构/" rel="prev" title="线性表（一）--顺序存储 （C语言实现）">
-                线性表（一）--顺序存储 （C语言实现） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
